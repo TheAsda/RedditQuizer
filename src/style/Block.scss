@@ -1,0 +1,43 @@
+@import './constants';
+
+.block {
+  background-color: $moduleColor;
+  margin: 15px;
+  min-height: 17%;
+  width: 70%;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  overflow: auto;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease-out;
+}
+
+.blockText {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  font-family: $fontFamily;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: $textColor;
+}
+
+.active {
+  background-color: rgb(253, 81, 81);
+  transition: background-color 0.2s ease-out;
+  animation: click 0.2s ease-out;
+}
+
+@keyframes click {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

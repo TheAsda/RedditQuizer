@@ -1,0 +1,88 @@
+@import './constants';
+
+$margin: 50px;
+
+@mixin scaleAnim() {
+  animation: scaleIn 1s ease-out;
+}
+
+.homepage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $textColor;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  margin-top: $margin;
+  @include scaleAnim();
+}
+
+.title,
+.description {
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: $margin;
+
+  &::after {
+    left: calc(50%);
+    display: block;
+    content: '';
+    background-color: $textColor;
+    height: 3px;
+    width: calc(100%);
+    transform: translateY($margin/2);
+  }
+}
+
+.description {
+  font-size: 40px;
+  padding-left: 20%;
+  padding-right: 20%;
+  width: 100%;
+  text-align: center;
+  @include scaleAnim();
+}
+
+.rules {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-bottom: $margin;
+  align-self: center;
+  @include scaleAnim();
+}
+
+.startButton {
+  background-color: $moduleColor;
+  width: 70%;
+  align-self: center;
+  height: 55px;
+  font-size: 30px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  @include scaleAnim();
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@import './MHomepage';

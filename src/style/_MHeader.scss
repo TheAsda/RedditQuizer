@@ -1,0 +1,35 @@
+@import './constants';
+
+@media screen and (max-width: 610px) {
+  .logoDiv {
+    flex-grow: 1;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .headerTitle {
+    flex-grow: 1;
+  }
+
+  .buttonDiv {
+    position: absolute;
+    right: 0;
+    top: $headerHeight;
+    height: calc(100% - 70px);
+    flex-direction: column;
+    transform: translateX(100%);
+  }
+
+  .headerButton {
+    animation: none;
+  }
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    overflow-x: hidden;
+  }
+}

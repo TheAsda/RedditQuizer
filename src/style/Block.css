@@ -1,0 +1,65 @@
+.block {
+  background-color: #6389df;
+  margin: 15px;
+  min-height: 17%;
+  width: 70%;
+  border-radius: 15px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  overflow-x: hidden;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.blockText {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  font-family: "Georgia, serif";
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #1f2b6c;
+}
+
+.active {
+  background-color: #fd5151;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+  -webkit-animation: click 0.2s ease-out;
+          animation: click 0.2s ease-out;
+}
+
+@-webkit-keyframes click {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes click {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=Block.css.map */

@@ -1,0 +1,56 @@
+@import './constants';
+
+.game {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  margin: 200px auto;
+  text-align: center;
+  font-size: 50px;
+  color: $textColor;
+}
+
+.gameBoard {
+  display: flex;
+  flex-direction: row;
+}
+
+.score {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.scoreText {
+  margin: 0;
+  font-family: $fontFamily;
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.center {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.answers,
+.questions {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 80%;
+}
+
+.answers {
+  align-items: flex-end;
+}
+
+.questions {
+  align-items: flex-start;
+}
