@@ -6,6 +6,10 @@ import Game from './Game/Game';
 import About from './About/About';
 import './style/App.css';
 
+setInterval(() => {
+  console.log('NOT DEAD');
+}, 15 * 60 * 1000);
+
 function App() {
   return (
     <BrowserRouter>
