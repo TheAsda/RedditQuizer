@@ -1,6 +1,6 @@
 import React from 'react';
 import Block from './Block';
-import WaveLoading from '@bit/akameco.styled-spinkit.wave-loading';
+//import WaveLoading from '@bit/akameco.styled-spinkit.wave-loading';
 import '../style/Game.css';
 import { Provider } from 'react-redux';
 import Store from './Redux/Store';
@@ -43,7 +43,7 @@ export default class extends React.Component {
     if (this.state.questions == null)
       return (
         <div className="game">
-          <WaveLoading color="#1f2b6c" size={200} />
+          {/* <WaveLoading color="#1f2b6c" size={200} /> */}
         </div>
       );
     else {
