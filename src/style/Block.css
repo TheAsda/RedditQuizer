@@ -1,8 +1,8 @@
 .block {
   background-color: #6389df;
   margin: 15px;
-  min-height: 17%;
-  width: 70%;
+  height: 11%;
+  width: 90%;
   border-radius: 15px;
   padding: 10px;
   display: -webkit-box;
@@ -10,8 +10,12 @@
   display: flex;
   overflow: auto;
   overflow-x: hidden;
-  -webkit-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .blockText {
@@ -26,11 +30,24 @@
 }
 
 .active {
-  background-color: #fd5151;
+  background-color: #bebcc1;
   -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
-  -webkit-animation: click 0.2s ease-out;
-          animation: click 0.2s ease-out;
+  -webkit-animation: click 0.15s ease-out;
+          animation: click 0.15s ease-out;
+}
+
+.right {
+  background-color: #31af31;
+  pointer-events: none;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.wrong {
+  background-color: #f3342d;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
 }
 
 @-webkit-keyframes click {

@@ -1,1 +1,202 @@
-/* No CSS *//*# sourceMappingURL=About.css.map */
+.about {
+  font-family: "Georgia, serif";
+  color: #1f2b6c;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .description {
+  -webkit-margin-before: 0.67em;
+          margin-block-start: 0.67em;
+  -webkit-animation: none;
+          animation: none;
+}
+
+.form {
+  font-family: inherit;
+  color: inherit;
+  width: 100%;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.disappear {
+  -webkit-animation: disappear 1s ease-out;
+          animation: disappear 1s ease-out;
+}
+
+.appear {
+  -webkit-animation: appear 1s ease-in;
+          animation: appear 1s ease-in;
+}
+
+@-webkit-keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#name,
+#message,
+.submit {
+  font-family: inherit;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 25px;
+  border-radius: 15px;
+  outline: none;
+}
+
+#name {
+  height: 40px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+#message {
+  height: 240px;
+  padding: 10px;
+  resize: none;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+#wrongData {
+  text-align: center;
+  font-size: 50px;
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease-in;
+  transition: opacity 0.7s ease-in;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 50%;
+}
+
+.show {
+  opacity: 1 !important;
+}
+
+.submit {
+  color: #1f2b6c;
+  height: 40px;
+  background-color: #6389df;
+  text-decoration: none;
+  border-style: none;
+}
+
+.thank {
+  text-align: center;
+  font-size: 50px;
+}
+
+.footer {
+  height: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.linkBox {
+  height: 100px;
+  width: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.link {
+  color: #1f2b6c;
+  text-decoration: none;
+  font-size: 25px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.link p {
+  margin: 0;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.credit {
+  color: #1f2b6c;
+}
+
+.credit a {
+  color: #6389df;
+}
+/*# sourceMappingURL=About.css.map */

@@ -1,12 +1,5 @@
 @import './constants';
 
-.game {
-  width: 100%;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-}
-
 .error {
   margin: 200px auto;
   text-align: center;
@@ -15,6 +8,8 @@
 }
 
 .gameBoard {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -33,18 +28,55 @@
 }
 
 .center {
-  height: 100%;
+  width: 20vw;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.centerButton {
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  width: auto;
+  border-radius: 20px;
+  height: auto;
+  padding: 7px;
+  background-color: $additionalColor1;
+  font-family: $fontFamily;
+  font-size: 30px;
+  color: $textColor;
+  box-shadow: none;
+  border-style: none;
+  user-select: none;
+  &:hover {
+    background-color: $additionalColor2;
+    transition: background-color 0.2s ease-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@keyframes backgroundGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .answers,
 .questions {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
 }
 
 .answers {

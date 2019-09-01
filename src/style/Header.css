@@ -84,6 +84,10 @@ header {
 
 .headerButton {
   margin: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-size: 30px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

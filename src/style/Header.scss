@@ -59,6 +59,7 @@ header {
 
 .headerButton {
   margin: $margin;
+  user-select: none;
   font-size: 30px;
   flex-grow: 1;
   cursor: pointer;

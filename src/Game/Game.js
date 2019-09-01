@@ -4,12 +4,19 @@ import WaveLoading from '@bit/akameco.styled-spinkit.wave-loading';
 import '../style/Game.css';
 import { Provider } from 'react-redux';
 import Store from './Redux/Store';
-import Line from './Line';
+import { setAnswers } from './Redux/Actions';
+import Score from './Score';
 
 export default class extends React.Component {
-  state = { questions: null, score: 0, timeout: false };
+  constructor() {
+    super();
+    this.fetchData = this.fetchData.bind(this);
+    this.submit = this.submit.bind(this);
+  }
 
-  componentWillMount() {
+  state = { questions: null, timeout: false };
+
+  async fetchData() {
     const url = process.env.REACT_APP_IP + '/getPosts';
     fetch(url)
       .then(res =>
@@ -20,9 +27,18 @@ export default class extends React.Component {
       .catch(err => this.setState({ timeout: true }));
   }
 
+  componentWillMount() {
+    this.fetchData();
+  }
+
+  submit() {
+    this.fetchData();
+    this.setState({ questions: null });
+  }
+
   render() {
     if (this.state.timeout) {
-      return <h3 className="error">Request timed out</h3>;
+      return <h3 className="error">Error: request timed out</h3>;
     }
     if (this.state.questions == null)
       return (
@@ -33,21 +49,44 @@ export default class extends React.Component {
     else {
       const answers = [];
       const questions = [];
+      const storeData = [];
+      let i = parseInt(Math.random() * 10) + 10,
+        j = parseInt(Math.random() * 10);
       this.state.questions.forEach(question => {
-        questions.push(<Block id={question.id}>{{ data: question.question, type: 'question' }}</Block>);
-        answers.push(<Block id={question.id}>{{ data: question.answers, type: 'answer' }}</Block>);
+        questions.push(<Block id={i}>{{ data: question.question, type: 'question' }}</Block>);
+        answers.push(<Block id={j}>{{ data: question.answers, type: 'answer' }}</Block>);
+        const element = { questionID: i, answerID: j };
+        IDS: while (true) {
+          i = parseInt(Math.random() < 0.8 ? i + Math.random() * 1000 : i - Math.random() * 1000);
+          j = parseInt(Math.random() < 0.8 ? j + Math.random() * 1000 : j - Math.random() * 1000);
+          if (i === j) continue;
+          for (let elem in storeData) {
+            if (
+              elem.questionID === i ||
+              elem.questionID === j ||
+              elem.answerID === i ||
+              elem.answerID === j
+            )
+              continue IDS;
+          }
+          break;
+        }
+        storeData.push(element);
       });
+      Store.dispatch(setAnswers(storeData));
+
       questions.sort(() => 0.5 - Math.random());
       answers.sort(() => 0.5 - Math.random());
+
       return (
         <Provider store={Store} className="game">
-          <div className="score">
-            <h3 className="scoreText">{'Score: ' + this.state.score}</h3>
-          </div>
+          <Score />
           <div className="gameBoard">
             <div className="questions">{questions}</div>
             <div className="center">
-              <button className="submit">Submit</button>
+              <button className="centerButton" onClick={this.submit}>
+                Reset
+              </button>
             </div>
             <div className="answers">{answers}</div>
           </div>

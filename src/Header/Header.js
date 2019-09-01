@@ -14,7 +14,7 @@ export default class extends React.Component {
           <img className="redditLogo" src={require('./RedditLogo.svg')} />
           <a className="headerTitle">Reddit Quizer</a>
         </div>
-        <img className="menu" src={require('./Menu.svg')} onclick={this.shMenu()} />
+        <img className="menu" src={require('./Menu.svg')} onClick={this.shMenu()} />
         <div className="buttonDiv">
           <Link to="/" className="headerButton">
             HOME
