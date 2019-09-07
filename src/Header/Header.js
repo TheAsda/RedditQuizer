@@ -3,18 +3,14 @@ import '../style/Header.css';
 import { Link } from 'react-router-dom';
 
 export default class extends React.Component {
-  shMenu(){
-    
-  }
-
   render() {
     return (
       <header>
         <div className="logoDiv">
-          <img className="redditLogo" src={require('./RedditLogo.svg')} />
-          <a className="headerTitle">Reddit Quizer</a>
+          <img className="redditLogo" src={require('./RedditLogo.svg')} alt="logo"/>
+          <h1 className="headerTitle">Reddit Quizer</h1>
         </div>
-        <img className="menu" src={require('./Menu.svg')} onClick={this.shMenu()} />
+        <img className="menu" src={require('./Menu.svg')} alt="menu"/>
         <div className="buttonDiv">
           <Link to="/" className="headerButton">
             HOME

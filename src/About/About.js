@@ -53,7 +53,7 @@ export default class extends React.Component {
         )}
         <div className="footer">
           <div className="linkBox">
-            <img className="logo" src={require('./githubLogo.svg')} />
+            <img className="logo" src={require('./githubLogo.svg')} alt="logo" />
             <a href="https://github.com/TheAsda" className="link">
               <p>Github</p>
             </a>

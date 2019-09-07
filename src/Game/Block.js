@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/Block.css';
-import { setCurrent, addScore ,decreaseScore} from './Redux/Actions';
+import { setCurrent, addScore, decreaseScore } from './Redux/Actions';
 import Store from './Redux/Store';
 
 export default class extends React.Component {
