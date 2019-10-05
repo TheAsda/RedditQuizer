@@ -14,7 +14,7 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
-    "heroku-prebuild":"npm config set '@bit:registry' https://node.bit.dev\nnpm install @bit/akameco.styled-spinkit.wave-loading",
+    "heroku-prebuild": "npm config set '@bit:registry' https://node.bit.dev\nnpm install @bit/akameco.styled-spinkit.wave-loading",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
